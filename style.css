@@ -18,3 +18,7 @@ li small{display:block;opacity:.65;font-size:.85rem;line-height:1.4}
 article h1{font-size:2rem;line-height:1.2;margin:0 0 .3rem}
 article .meta{opacity:.65;font-size:.9rem;margin-bottom:2rem}
 footer{margin-top:3rem;opacity:.65;font-size:.85rem}
+article p,article li{margin-bottom:1.1rem}
+article blockquote{margin:1.5rem 0;padding-left:1.1rem;border-left:2px solid var(--rule);font-style:italic}
+article code{font-size:.88em;background:var(--rule);padding:.1em .35em;border-radius:3px}
+article h2{margin-top:2.2rem}
