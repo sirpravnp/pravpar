@@ -1,17 +1,20 @@
-:root{--bg:#faf9f5;--fg:#1f1e1d;--muted:#73726c;--rule:#e3e1d8;--link:#c4552d}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1918;--fg:#ebe9e1;--muted:#98968d;--rule:#33312e;--link:#e0825c}}
+:root{--bg:#fbfaf6;--fg:#1f1e1c;--bar:#8a5a3c}
+:root[data-theme="dark"]{--bg:#201f1d;--fg:#f4f2ec;--bar:#5a3d2b}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#201f1d;--fg:#f4f2ec;--bar:#5a3d2b}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:19px/1.65 Georgia,"Iowan Old Style","Times New Roman",serif}
-main{max-width:34rem;margin:0 auto;padding:4rem 1.25rem 6rem}
-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2.5rem}
-header a.name{font-weight:600;color:var(--fg);text-decoration:none;font-size:1.1rem}
-nav a{margin-left:1.25rem;color:var(--muted);text-decoration:none;font-size:.9rem}
-a{color:var(--link)}
-h2{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:1px solid var(--rule);padding-bottom:.4rem;margin:3rem 0 1rem}
-ul.list{list-style:none;padding:0;margin:0}
-ul.list li{display:flex;gap:1rem;padding:.25rem 0}
-ul.list time{color:var(--muted);font-size:.85rem;min-width:5.5rem;padding-top:.2rem}
-ul.list small{color:var(--muted);display:block;font-size:.85rem;line-height:1.4}
-article h1{font-size:2rem;line-height:1.2;margin:.5rem 0}
-article .meta{color:var(--muted);font-size:.9rem;margin-bottom:2rem}
-footer{margin-top:4rem;color:var(--muted);font-size:.85rem}
+body{margin:0;background:var(--bg);color:var(--fg);border-top:4px solid var(--bar);font:18px/1.65 "Newsreader","Iowan Old Style",Georgia,serif;-webkit-font-smoothing:antialiased}
+main{max-width:34rem;margin:0 auto;padding:1.5rem 1.25rem 6rem}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+header a.name{font-weight:600;font-size:1.6rem;color:var(--fg);text-decoration:none}
+a{color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+p{margin:0 0 1.1rem}
+h2{font-size:1.2rem;font-weight:600;margin:2rem 0 .6rem}
+ul{margin:0;padding-left:1.1rem}
+li{margin:.5rem 0}
+li small{display:block;opacity:.65;font-size:.85rem;line-height:1.4}
+#theme{appearance:none;width:34px;height:18px;border-radius:9px;background:var(--fg);position:relative;cursor:pointer;border:0}
+#theme::after{content:"";position:absolute;top:3px;left:3px;width:12px;height:12px;border-radius:50%;background:var(--bg);transition:transform .15s}
+#theme:checked::after{transform:translateX(16px)}
+article h1{font-size:2rem;line-height:1.2;margin:0 0 .3rem}
+article .meta{opacity:.65;font-size:.9rem;margin-bottom:2rem}
+footer{margin-top:3rem;opacity:.65;font-size:.85rem}
