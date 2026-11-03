@@ -18,6 +18,8 @@ function parse(file) {
 fs.rmSync("dist", { recursive: true, force: true });
 fs.mkdirSync("dist/essays", { recursive: true });
 for (const f of ["style.css", "theme.js"]) fs.copyFileSync(f, path.join("dist", f));
+fs.cpSync("assets", "dist/assets", { recursive: true });
+fs.writeFileSync("dist/CNAME", "pravpar.com\n");
 
 const template = read("src/essay.html");
 const posts = fs.readdirSync("content/essays").filter((f) => f.endsWith(".md")).map((f) => {
