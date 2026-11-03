@@ -2,25 +2,26 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Praveen Parthasarathy</title><meta name="description" content="Projects and essays by Praveen Parthasarathy.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap">
 <link rel="stylesheet" href="style.css"></head>
 <body><main>
 <header><a class="name" href="./">Praveen Parthasarathy</a><input id="theme" type="checkbox" aria-label="Toggle light/dark theme"></header>
 
-<p>I'm a third-year medical student interested in cardiology, simulation technology, language models, and diagnostics, and education. </p>
+<div class="box bio"><p>I'm a third-year medical student interested in cardiology, simulation technology, language models, diagnostics, and education.</p></div>
 
-<h2>Essays</h2>
+<div class="grid">
+<section class="box navy"><span class="label">Essays</span>
 <ul>
 {{essays}}
-</ul>
-
-<h2>Projects</h2>
-<ul>
-<li><a href="https://corosim.com">CoroSim</a><small>Closed-loop cardiovascular teaching simulator.</small></li>
-</ul>
-
-<h2>Research</h2>
+</ul></section>
+<section class="box olive"><span class="label">Research</span>
 <ul>
 <li><a href="https://scholar.google.com/citations?user=RfXXQFgAAAAJ&hl=en">Google Scholar</a></li>
-</ul>
+</ul></section>
+</div>
+
+<section class="box forest"><span class="label">Projects</span>
+<ul>
+<li><a href="https://corosim.com">CoroSim</a><small>Closed-loop cardiovascular teaching simulator.</small></li>
+</ul></section>
 </main><script src="theme.js"></script></body></html>
