@@ -1,12 +1,12 @@
-:root{--bg:#fbfaf6;--fg:#1f1e1c;--bar:#8a5a3c}
-:root[data-theme="dark"]{--bg:#201f1d;--fg:#f4f2ec;--bar:#5a3d2b}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#201f1d;--fg:#f4f2ec;--bar:#5a3d2b}}
+:root{--bg:#f3efe6;--fg:#23251f;--bar:#3f5d45;--muted:#7a7a6b;--rule:#d9d3c3;--link:#3f5d45}
+:root[data-theme="dark"]{--bg:#1c201b;--fg:#ece8dc;--bar:#7da084;--muted:#9a9a8a;--rule:#343a32;--link:#9bbfa3}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c201b;--fg:#ece8dc;--bar:#7da084;--muted:#9a9a8a;--rule:#343a32;--link:#9bbfa3}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);border-top:4px solid var(--bar);font:18px/1.65 "Newsreader","Iowan Old Style",Georgia,serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--fg);border-top:4px solid var(--bar);font:16.5px/1.75 "Libre Caslon Text",Georgia,serif;-webkit-font-smoothing:antialiased}
 main{max-width:34rem;margin:0 auto;padding:1.5rem 1.25rem 6rem}
 header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
 header a.name{font-weight:600;font-size:1.6rem;color:var(--fg);text-decoration:none}
-a{color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 p{margin:0 0 1.1rem}
 h2{font-size:1.2rem;font-weight:600;margin:2rem 0 .6rem}
 ul{margin:0;padding-left:1.1rem}
