@@ -25,9 +25,8 @@ const template = read("src/essay.html");
 const posts = fs.readdirSync("content/essays").filter((f) => f.endsWith(".md")).map((f) => {
   const { meta, body } = parse(path.join("content/essays", f));
   const slug = f.replace(/\.md$/, "");
-  const minutes = Math.max(1, Math.round(body.split(/\s+/).length / 230));
   fs.writeFileSync(`dist/essays/${slug}.html`, fill(template, {
-    title: esc(meta.title), summary: esc(meta.summary || ""), date: fmt(meta.date), minutes, content: marked.parse(body),
+    title: esc(meta.title), summary: esc(meta.summary || ""), date: fmt(meta.date), content: marked.parse(body),
   }));
   return { slug, ...meta };
 }).sort((a, b) => b.date.localeCompare(a.date));
